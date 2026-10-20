@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>update</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources/fundo_halloween.jpg" />
+    <None Remove="Resources/logo.png" />
+    <None Remove="Resources/btn_play.png" />
+    <None Remove="Resources/card_patch.png" />
+    <None Remove="Resources/card_news.png" />
+    <EmbeddedResource Include="Resources/fundo_halloween.jpg" LogicalName="fundo_halloween.jpg" />
+    <EmbeddedResource Include="Resources/logo.png" LogicalName="logo.png" />
+    <EmbeddedResource Include="Resources/btn_play.png" LogicalName="btn_play.png" />
+    <EmbeddedResource Include="Resources/card_patch.png" LogicalName="card_patch.png" />
+    <EmbeddedResource Include="Resources/card_news.png" LogicalName="card_news.png" />
+    <ApplicationConfig Remove="update.exe.config" />
+    <ApplicationConfig Include="update.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>
